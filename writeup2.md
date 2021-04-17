@@ -1,7 +1,4 @@
-scp test laurie@172.16.129.137:/home/laurie/test
-
-
-
+# Writeup2
 
 The first step it to use the credentials of laurie which we got in writeup1.md.
 
