@@ -7,7 +7,7 @@ GRUB enables a user to change the way the OS starts by providing a command line 
 
 In order to stop someone from using GRUB, it is possible to configure GRUB to work only for specific user accounts by setting user accounts in the GRUB configuration (username and password).
 
-In this case, the access to GRUB is not protected so it is possible to boot the OS as we wish.
+The access to GRUB is not protected so it is possible to boot the OS as we wish.
 
 When starting the VM, simply press the left SHIFT key in order to access GRUB inside the VMware fusion VM's window.
 
