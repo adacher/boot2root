@@ -23,16 +23,13 @@ cd Applications/dirb222
 
 dirb https://192.168.1.37 wordlists/common.txt
 
------------------
 DIRB v2.22    
 By The Dark Raver
------------------
+
 
 START_TIME: Thu Apr 29 13:14:57 2021
 URL_BASE: https://192.168.1.37/
 WORDLIST_FILES: wordlists/common.txt
-
------------------
 
 GENERATED WORDS: 4612                                                          
 
