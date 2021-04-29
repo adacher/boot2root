@@ -2,7 +2,7 @@ In this writeup, we use the mount and unsquashfs commands inside a Docker contai
 
 This solution is an alternative starting route than the beginning of writeup1.md and is easier as well.
 
-The first step is to build our Docker image within within which we specify which dependencies to install and we also download the .iso file of the VM.
+The first step is to build our Docker image within which we specify which dependencies to install and we also download the .iso file of the VM.
 
 ```
 docker build . -t ubuntu
