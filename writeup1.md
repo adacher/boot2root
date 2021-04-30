@@ -1,4 +1,4 @@
-#Writeup 1
+# Writeup 1
 
 First step is to get the ip of the vm.
 
