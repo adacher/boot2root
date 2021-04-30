@@ -180,6 +180,8 @@ void phase_1(char *param_1)
 ```
 
 Solution :
+
+Program simply compares the input and expects this string in order to continue :
 ```
 Public speaking is very easy.
 ```
@@ -218,6 +220,9 @@ void phase_2(char *param_1)
 }
 ```
 Solution :
+
+We need to provide the correct values as input in order to proceed.
+After checking what the values need to be, we get the result.
 
 ```
 1 2 6 24 120 720
@@ -299,9 +304,14 @@ void phase_3(char *param_1)
 }
 ```
 
+case = first parameter
+second parameter = cVar2
+third parameter = value compared in hex.
+There are 7 solutions in total but we later realised that we need to use a specific one :
+
 Solution :
 ```
-0 q 777
+1 b 214
 ```
 
 Phase 4 :
@@ -421,8 +431,33 @@ void phase_5(char *param_1)
 
 Solution :
 
+The program compares 2 strings and if the first one is not equal to "giants", the bomb explodes.
+We built a javascript program in order to solve it.
+
 ```
-opekma
+
+<script>
+  const arrayString = "isrveawhobpnutfg";
+  const alphabet = "abcdefghijklmnopqrstuvwxyz";
+  const test = () => {
+    let sum = [];
+    const findWord = "giants";
+    for (let i = 0; i < 6; i++) {
+      for (let j = 0; j < alphabet.length; j++) {
+        if (arrayString[alphabet[j].charCodeAt(0) & 0xf] === findWord[i]) {
+          sum.push(alphabet[j]);
+          break;
+        }
+      }
+    }
+    console.log(sum);
+  };
+  test();
+</script>
+```
+
+```
+Result : opekma
 ```
 
 
