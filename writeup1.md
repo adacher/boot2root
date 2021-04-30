@@ -179,11 +179,11 @@ void phase_1(char *param_1)
 }
 ```
 
-Simply provide this string as input :
-
+Solution :
 ```
 Public speaking is very easy.
 ```
+
 Phase 2 :
 ```
 void read_six_numbers(char *param_1,int param_2)
@@ -217,6 +217,12 @@ void phase_2(char *param_1)
   return;
 }
 ```
+Solution :
+
+```
+1 2 6 24 120 720
+```
+
 
 Phase3 :
 
@@ -293,6 +299,11 @@ void phase_3(char *param_1)
 }
 ```
 
+Solution :
+```
+0 q 777
+```
+
 Phase 4 :
 
 ```
@@ -313,6 +324,12 @@ void phase_4(char *param_1)
   return;
 }
 ```
+Solution :
+
+```
+9
+```
+
 
 Phase 5:
 
@@ -381,6 +398,12 @@ void phase_5(char *param_1)
   return;
 }
 ```
+Solution :
+
+```
+opekma
+```
+
 
 Phase 6 :
 
@@ -458,6 +481,13 @@ void phase_6(char *param_1)
   return;
 }
 ```
+
+Solution :
+
+```
+4 2 6 3 1 5
+```
+
 
 
 
