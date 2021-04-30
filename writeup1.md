@@ -307,6 +307,22 @@ Solution :
 Phase 4 :
 
 ```
+int func4(int param_1)
+{
+  int iVar1;
+  int iVar2;
+  
+  if (param_1 < 2) {
+    iVar2 = 1;
+  }
+  else {
+    iVar1 = func4(param_1 + -1);
+    iVar2 = func4(param_1 + -2);
+    iVar2 = iVar2 + iVar1;
+  }
+  return iVar2;
+}
+
 void phase_4(char *param_1)
 
 {
@@ -324,6 +340,10 @@ void phase_4(char *param_1)
   return;
 }
 ```
+The bomb explodes if sscanf doesn't return 1 or if local_8 contains 0.
+The bomb explodes if iVar1 is not 55 (0x37 = 55), func4() is called in a recursive way and modifies the value of iVar1 and iVar2 depending on the provided parameter. 
+After testing and rebuilding the function, the correct computed value to reach 55 is to provide 9 as an argument.
+
 Solution :
 
 ```
@@ -398,6 +418,7 @@ void phase_5(char *param_1)
   return;
 }
 ```
+
 Solution :
 
 ```
@@ -483,6 +504,8 @@ void phase_6(char *param_1)
 ```
 
 Solution :
+
+The goal is to provide each node as an argument and to sort them by their value in descending order (highest value to lowest value).
 
 ```
 4 2 6 3 1 5
