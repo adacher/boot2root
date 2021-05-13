@@ -595,7 +595,7 @@ Segmentation fault (core dumped)
 Let's use a ret2libc in order to get root access.
 
 
-1) Get system address : print &system
+1) Get system address :
 ```
 (gdb) p system
 $1 = {<text variable, no debug info>} 0xb7e6b060 <system>
