@@ -546,6 +546,42 @@ The goal is to provide each node as an argument and to sort them by their value 
 4 2 6 3 1 5
 ```
 
+Bomb is defused and the password for the user thor is all of the combined answers as a string which gives us :
+
+```
+ssh thor@192.168.1.37
+thor@192.168.1.37's password: Publicspeakingisveryeasy.126241207201b2149opekmq426135
+thor@BornToSecHackMe:~$
+```
+
+```
+thor@BornToSecHackMe:~$ ls
+README  turtle
+thor@BornToSecHackMe:~$ cat README
+Finish this challenge and use the result as password for 'zaz' user.
+```
+
+The turtle file refers to https://docs.python.org/fr/3/library/turtle.html.
+The file contains instructions in order to draw a word. Let's use the python library to solve it and also indicates we need to use md5 on the result.
+
+The result is
+
+```
+SLASH
+
+md5(SLASH) -> 646da671ca01bb5d84dbb5fb2238dc8e
+```
+
+Authenticate as zaz :
+
+```
+thor@BornToSecHackMe:~$ su zaz
+Password: 646da671ca01bb5d84dbb5fb2238dc8e
+zaz@BornToSecHackMe:~$ ls
+exploit_me  mail
+```
+
+
 
 
 
