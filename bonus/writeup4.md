@@ -1,5 +1,7 @@
 In this writeup, we use the mount and unsquashfs commands inside a Docker container to access data contained in the iso file of the boot2root vm.
 
+This can be done without Docker but it was interesting to use it this way.
+
 This solution is an alternative starting route than the beginning of writeup1.md and is easier as well.
 
 The first step is to build our Docker image within which we specify which dependencies to install and we also download the .iso file of the VM.
